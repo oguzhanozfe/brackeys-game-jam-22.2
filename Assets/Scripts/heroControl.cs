@@ -23,7 +23,6 @@ public class heroControl : MonoBehaviour
     private PlayerControls playerControls;
     private PlayerInput playerInput;
 
-    public GunController theGun;
 
     public GameObject heartt;
 
@@ -102,14 +101,14 @@ public class heroControl : MonoBehaviour
  
     private void Fire()
     {
-        theGun.heart = heartt;
-        if (playerControls.Controls.Attack.triggered)
+        if (playerControls.Controls.Fire.triggered)
         {
-            theGun.isFiring = true;
-        }
-        else
-        {
-            theGun.isFiring = false;
+            GameObject heart = Instantiate(heartt, transform.position, transform.rotation);
+            heart.AddComponent<Rigidbody>();
+            heart.GetComponent<Rigidbody>().useGravity = false;
+            heart.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+
+            Destroy(heart, 2);
         }
     }
 
