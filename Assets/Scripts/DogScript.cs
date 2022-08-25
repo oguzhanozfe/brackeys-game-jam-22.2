@@ -13,7 +13,10 @@ public class DogScript : MonoBehaviour
     bool hasEntered; //dogs have collisions
 
     public Vector3 offSet; 
-
+    
+    public int health;
+    public int maxHealth;
+    public int damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,11 @@ public class DogScript : MonoBehaviour
         {
             hasEntered = true;
         }
+
+        if(col.tag == "Heart")
+        {
+            Debug.Log("heart");
+        }
     }
     
     void OnTriggerExit(Collider col)
@@ -50,4 +58,6 @@ public class DogScript : MonoBehaviour
             hasEntered = false;
         }
     }
+
+    
 }
