@@ -14,7 +14,7 @@ public class DogScript : MonoBehaviour
 
     public Vector3 offSet; 
     
-    public int health;
+    private int health;
     public int maxHealth;
     public int damage;
 
@@ -26,26 +26,27 @@ public class DogScript : MonoBehaviour
         if(gameObject.tag == "Stray")
         {
             gameObject.AddComponent<BoxCollider>().isTrigger = true;
+            health = maxHealth;
         }
     }
 
     void Update()
     {
         transform.LookAt(player.transform);
-        
+        //              MOVING
         if (isFriend && !hasEntered)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position + offSet, Time.deltaTime * 5 );
         }
-
         if(hasEntered)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * .001f );            
         }
 
+        //              FRIENDS DISABLE HITBOX
         if(gameObject.tag == "Friend")
         {
-            Destroy(gameObject.GetComponent<BoxCollider>());
+//            Destroy(gameObject.GetComponent<BoxCollider>());
         }
     }
 
@@ -54,6 +55,17 @@ public class DogScript : MonoBehaviour
         if(col.name == "Player")
         {
             hasEntered = true;
+        }
+
+        if(col.name == "Heart")
+        {
+            health--;
+            Debug.Log(health);
+        }
+        if(health == 0 && gameObject.tag == "Stray")
+        {
+            gameObject.tag = "Friend";
+            health = maxHealth;
         }
     }
     
