@@ -107,8 +107,6 @@ public class heroControl : MonoBehaviour
             heart.AddComponent<Rigidbody>();
             heart.GetComponent<Rigidbody>().useGravity = false;
             heart.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
-            heart.tag = "Heart";
-            SphereCollider sc = heart.AddComponent(typeof(SphereCollider)) as SphereCollider;
             Destroy(heart, 2);
         }
     }

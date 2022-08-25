@@ -1259,21 +1259,6 @@ Transform:
   m_Father: {fileID: 14133445}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
---- !u!114 &1625011366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625011364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14a682d036a9d1b4fb9fde3fbc426415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
->>>>>>> Stashed changes
 --- !u!65 &1625011367
 BoxCollider:
   m_ObjectHideFlags: 0
