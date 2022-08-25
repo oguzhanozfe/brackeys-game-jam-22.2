@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class BulletController : MonoBehaviour
 {
     public float speed = 10.0f;
     public float lifeTime = 2.0f;

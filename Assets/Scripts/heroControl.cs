@@ -25,6 +25,8 @@ public class heroControl : MonoBehaviour
 
     public GunController theGun;
 
+    public GameObject heartt;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -47,7 +49,7 @@ public class heroControl : MonoBehaviour
         HandleInput();
         HandleMovement();
         HandleRotation();
-        Fire();
+        Fire();                        
     }
     private void HandleInput()
     {
@@ -100,10 +102,10 @@ public class heroControl : MonoBehaviour
  
     private void Fire()
     {
+        theGun.heart = heartt;
         if (playerControls.Controls.Attack.triggered)
         {
             theGun.isFiring = true;
-            Debug.Log("Fire");
         }
         else
         {
