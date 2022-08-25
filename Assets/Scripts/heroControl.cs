@@ -25,12 +25,19 @@ public class heroControl : MonoBehaviour
 
 
     public GameObject heartt;
+    public GameObject hand;
+
+    public bool canShoot;
+    public float lastShot;
+    public float cooldown;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
         playerControls = new PlayerControls();
         playerInput = GetComponent<PlayerInput>();
+
+        lastShot = 0;
     }
 
     private void OnEnable()
@@ -101,20 +108,32 @@ public class heroControl : MonoBehaviour
  
     private void Fire()
     {
-        if (playerControls.Controls.Fire.triggered)
+        if (playerControls.Controls.Fire.triggered && canShoot)
         {
-            GameObject heart = Instantiate(heartt, transform.position, transform.rotation);
-            heart.AddComponent<Rigidbody>();
-            heart.GetComponent<Rigidbody>().useGravity = false;
+            GameObject heart = Instantiate(heartt, hand.transform.position, transform.rotation);
+
             heart.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+            heart.tag = "Heart";
+
+            BoxCollider sc = heart.AddComponent(typeof(BoxCollider)) as BoxCollider;
             Destroy(heart, 2);
+            lastShot = Time.time;
         }
+        canShoot = (Time.time - lastShot > cooldown);
     }
 
     public void OnDeviceChange (PlayerInput pi)
 
     {
         isGamepad = pi.currentControlScheme.Equals("Controller") ? true : false;
+    }
+
+    IEnumerator DelayAction(float delayTime)
+    {
+        //Wait for the specified delay time before continuing.
+        yield return new WaitForSeconds(delayTime);
+    
+        //Do the action after the delay time has finished.
     }
 }
 
