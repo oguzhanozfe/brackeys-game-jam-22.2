@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Stray
   - Friend
+  - Heart
   layers:
   - Default
   - TransparentFX
