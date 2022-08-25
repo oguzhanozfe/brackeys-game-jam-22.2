@@ -10,12 +10,14 @@ public class HealthBar : MonoBehaviour
      private void Start()
     {
         Transform bar = transform.Find("Bar");
+        bar.localScale = new Vector3(0.5f, 1, 1);
+    
     }
 
     // Update is called once per frame
     public void Setsize(float sizeNormalized)
     {
-        bar.localScale = new Vector3(sizeNormalized, 1f);
+        bar.localScale = new Vector3(0.4f, 1f);
     }
 
 }
