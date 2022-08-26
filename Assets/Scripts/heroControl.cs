@@ -12,7 +12,7 @@ public class heroControl : MonoBehaviour
     [SerializeField] private float controllerDeadzone = 0.1f;
     [SerializeField] private float gamepadRotateSmooth = 1000f;
     [SerializeField] private bool isGamepad;
-    [SerializeField] private HealthBar healthBar;
+    [SerializeField] public HealthBar healthBar;
     [SerializeField] public float health = 100;
 
     private CharacterController controller;
@@ -58,7 +58,8 @@ public class heroControl : MonoBehaviour
         HandleInput();
         HandleMovement();
         HandleRotation();
-        Fire();                        
+        Fire();
+        OnDamage();                        
     }
     private void HandleInput()
     {
@@ -137,6 +138,10 @@ public class heroControl : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
     
         //Do the action after the delay time has finished.
+    }
+    public void OnDamage ()
+    {
+        healthBar.setSize(.4f);
     }
 
 

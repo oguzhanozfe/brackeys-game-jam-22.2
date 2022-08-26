@@ -296,7 +296,7 @@ MonoBehaviour:
   controllerDeadzone: 0.1
   gamepadRotateSmooth: 1000
   isGamepad: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 56365295}
   health: 100
   heartt: {fileID: 919132148693338951}
   hand: {fileID: 643503784}
