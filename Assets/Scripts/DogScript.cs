@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class DogScript : MonoBehaviour
 {
+    [SerializeField] public HealthBar healthBar;
+
+
     public GameObject player;
 
     bool isFriend;
@@ -15,9 +18,10 @@ public class DogScript : MonoBehaviour
 
     public Vector3 offSet; 
     
-    public int health;
-    public int maxHealth;
-    public int damage;
+    public float health;
+    public float maxHealth;
+    public double damage;
+    public float HSize;
 
     // Start is called before the first frame update
     void Start()
@@ -33,11 +37,13 @@ public class DogScript : MonoBehaviour
     void Update()
     {
         isFriend = (gameObject.tag == "Friend" || CompareTag("Friend"));
+        
 
         if(health>0 && isHit)
         {
             isHit = false;
             health--;
+            healthBar.setSize(health/10);
             Debug.Log(health);
         }
         else if(health <= 0)
