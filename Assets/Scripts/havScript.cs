@@ -6,9 +6,7 @@ public class havScript : MonoBehaviour
 {
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log(col.name);
-
-        if(col.tag == "Player" || col.tag == "Heart" )
+        if(col.tag == "Player")
             Destroy(gameObject);
     }
 }

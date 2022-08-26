@@ -25,15 +25,19 @@ public class DogScript : MonoBehaviour
     
     public float health;
     public float maxHealth;
-    public double damage;
     public float HSize;
 
-    public GameObject HavBullet;
+    public GameObject HavBullet1;
+    public GameObject HavBullet2;
+    public GameObject HavBullet3;
+    public GameObject HavBullet4;
+    int index;
+    GameObject HavBullet;
+    GameObject[] HavAttacks;
 
     // Start is called before the first frame update
     void Start()
     {
-
         if(gameObject.tag == "Stray")
         {
             gameObject.AddComponent<BoxCollider>().isTrigger = true;
@@ -43,7 +47,7 @@ public class DogScript : MonoBehaviour
 
     void Update()
     {
-        havCooldown = Random.Range(2f, 8f);
+        havCooldown = Random.Range(4f, 10f);
 
         isFriend = (gameObject.tag == "Friend" || CompareTag("Friend"));
         
@@ -105,19 +109,23 @@ public class DogScript : MonoBehaviour
 
     void Hav()
     {
+        GameObject[] HavAttacks = {HavBullet1, HavBullet2, HavBullet3, HavBullet4};
+
         if(canHav)
         {
+            index = Random.Range (0, HavAttacks.Length);
+            HavBullet = (HavAttacks[index]);
+            
             GameObject havBullet = Instantiate(HavBullet, transform.position, transform.rotation);
 
             havBullet.GetComponent<Rigidbody>().AddForce(transform.forward * 500);
             havBullet.tag = "HavHav";
             SphereCollider sc = havBullet.AddComponent(typeof(SphereCollider)) as SphereCollider;
             sc.isTrigger = true;
-            Destroy(havBullet, 2f);
+            Destroy(havBullet, 5f);
             lastShot = Time.time;
         }
         canHav = (Time.time - lastShot > havCooldown);
-        Debug.Log(havCooldown); 
     }
 
     
