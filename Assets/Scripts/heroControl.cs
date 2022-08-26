@@ -14,6 +14,7 @@ public class heroControl : MonoBehaviour
     [SerializeField] private bool isGamepad;
     [SerializeField] public HealthBar healthBar;
     [SerializeField] public float health = 100;
+    public float maxHealth = 100;
 
     private CharacterController controller;
 
@@ -59,7 +60,7 @@ public class heroControl : MonoBehaviour
         HandleMovement();
         HandleRotation();
         Fire();
-        OnDamage();                        
+        SizeArrange();                        
     }
     private void HandleInput()
     {
@@ -133,10 +134,16 @@ public class heroControl : MonoBehaviour
     }
 
 
-    public void OnDamage ()
+    public void SizeArrange ()
     {
-        healthBar.setSize(.4f);
+        healthBar.setSize(health/maxHealth);
     }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if(col.tag == "HavHav")
+            health = health -5;
+    } 
 
 
 }

@@ -8,13 +8,18 @@ using UnityEngine;
 public class DogScript : MonoBehaviour
 {
     [SerializeField] public HealthBar healthBar;
+    [SerializeField] public GameObject border;
 
 
     public GameObject player;
 
+    bool canHav = true;
     bool isFriend;
     bool hasEntered; //dogs have collisions
     bool isHit;
+
+    double havCooldown = .5;
+    double lastShot = 0;
 
     public Vector3 offSet; 
     
@@ -22,6 +27,8 @@ public class DogScript : MonoBehaviour
     public float maxHealth;
     public double damage;
     public float HSize;
+
+    public GameObject HavBullet;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +43,8 @@ public class DogScript : MonoBehaviour
 
     void Update()
     {
+        havCooldown = Random.Range(2f, 8f);
+
         isFriend = (gameObject.tag == "Friend" || CompareTag("Friend"));
         
 
@@ -48,6 +57,7 @@ public class DogScript : MonoBehaviour
         }
         else if(health <= 0)
         {
+            Destroy(border);
             gameObject.tag = "Friend";
         }
 
@@ -61,6 +71,12 @@ public class DogScript : MonoBehaviour
         if(hasEntered)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * .001f );            
+        }
+
+        //Shoot
+        if(!isFriend)
+        {
+            Hav();
         }
 
 
@@ -85,6 +101,23 @@ public class DogScript : MonoBehaviour
         {
             hasEntered = false;
         }
+    }
+
+    void Hav()
+    {
+        if(canHav)
+        {
+            GameObject havBullet = Instantiate(HavBullet, transform.position, transform.rotation);
+
+            havBullet.GetComponent<Rigidbody>().AddForce(transform.forward * 500);
+            havBullet.tag = "HavHav";
+            SphereCollider sc = havBullet.AddComponent(typeof(SphereCollider)) as SphereCollider;
+            sc.isTrigger = true;
+            Destroy(havBullet, 2f);
+            lastShot = Time.time;
+        }
+        canHav = (Time.time - lastShot > havCooldown);
+        Debug.Log(havCooldown); 
     }
 
     

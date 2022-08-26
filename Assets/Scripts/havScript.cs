@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeartScript : MonoBehaviour
+public class havScript : MonoBehaviour
 {
     void OnTriggerEnter(Collider col)
     {
-        if( ((col.tag == "Stray") && (col is BoxCollider)) || (col.tag == "HavHav") )
-        {
+        Debug.Log(col.name);
+
+        if(col.tag == "Player" || col.tag == "Heart" )
             Destroy(gameObject);
-        }
     }
 }
