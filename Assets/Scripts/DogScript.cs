@@ -11,17 +11,17 @@ public class DogScript : MonoBehaviour
 
     bool isFriend;
     bool hasEntered; //dogs have collisions
+    bool isHit;
 
     public Vector3 offSet; 
     
-    private int health;
+    public int health;
     public int maxHealth;
     public int damage;
 
     // Start is called before the first frame update
     void Start()
     {
-        isFriend = (gameObject.tag == "Friend");
 
         if(gameObject.tag == "Stray")
         {
@@ -32,6 +32,20 @@ public class DogScript : MonoBehaviour
 
     void Update()
     {
+        isFriend = (gameObject.tag == "Friend" || CompareTag("Friend"));
+
+        if(health>0 && isHit)
+        {
+            isHit = false;
+            health--;
+            Debug.Log(health);
+        }
+        else if(health <= 0)
+        {
+            gameObject.tag = "Friend";
+        }
+
+
         transform.LookAt(player.transform);
         //              MOVING
         if (isFriend && !hasEntered)
@@ -43,11 +57,7 @@ public class DogScript : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * .001f );            
         }
 
-        //              FRIENDS DISABLE HITBOX
-        if(gameObject.tag == "Friend")
-        {
-//            Destroy(gameObject.GetComponent<BoxCollider>());
-        }
+
     }
 
     void OnTriggerEnter(Collider col)
@@ -57,15 +67,9 @@ public class DogScript : MonoBehaviour
             hasEntered = true;
         }
 
-        if(col.name == "Heart")
+        if(col.tag == "Heart" && gameObject.tag == "Stray" && col is BoxCollider)
         {
-            health--;
-            Debug.Log(health);
-        }
-        if(health == 0 && gameObject.tag == "Stray")
-        {
-            gameObject.tag = "Friend";
-            health = maxHealth;
+            isHit = true;
         }
     }
     

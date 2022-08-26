@@ -542,7 +542,7 @@ SphereCollider:
   m_GameObject: {fileID: 68770399}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 1.2700887
   m_Center: {x: 5.45e-43, y: 0.4990958, z: -0.000741601}
@@ -559,7 +559,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 14133440}
-  offSet: {x: 0, y: 0, z: 0}
+  offSet: {x: 0, y: 0, z: 3}
+  health: 0
   maxHealth: 10
   damage: 0
 --- !u!4 &68770410 stripped
@@ -690,7 +691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228726617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.25, z: 0}
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1223,6 +1224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 14133440}
   offSet: {x: -0.5, y: 0, z: 0}
+  health: 0
   maxHealth: 10
   damage: 0
 --- !u!135 &938836590
@@ -1234,7 +1236,7 @@ SphereCollider:
   m_GameObject: {fileID: 938836585}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 6
   m_Center: {x: 0, y: 0, z: 0}
@@ -1809,6 +1811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 14133440}
   offSet: {x: 0.5, y: 0, z: 0}
+  health: 0
   maxHealth: 0
   damage: 0
 --- !u!135 &1840563855
@@ -1979,8 +1982,8 @@ Transform:
   m_GameObject: {fileID: 919132148693338951}
   m_LocalRotation: {x: -6.123234e-17, y: 1, z: 6.123234e-17, w: -3.7493994e-33}
   m_LocalPosition: {x: 1000.8086, y: 0, z: -2.457818}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2036031262}
   m_RootOrder: 1
