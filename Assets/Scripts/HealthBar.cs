@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
-
-    private Transform bar;
-    // Start is called before the first frame update
-     private void Start()
-    {
-        Transform bar = transform.Find("Bar");
+    void Start(){
+        RectTransform bar = transform.Find("Bar").GetComponent<RectTransform>();
+        bar.sizeDelta = new Vector2(bar.sizeDelta.x, bar.sizeDelta.y * 0.5f);
     }
 
-    // Update is called once per frame
-    public void Setsize(float sizeNormalized)
-    {
-        bar.localScale = new Vector3(sizeNormalized, 1f);
-    }
+    void Update(){
 
+    }
 }

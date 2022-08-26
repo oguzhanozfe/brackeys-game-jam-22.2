@@ -139,11 +139,6 @@ public class heroControl : MonoBehaviour
         //Do the action after the delay time has finished.
     }
 
-    public void OnHealthChange(float health)
-    {
-        healthBar.Setsize(.4f);
-        //health -= damage;
-        //this.health = health;
-    }
+
 }
 
