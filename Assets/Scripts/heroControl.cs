@@ -132,13 +132,7 @@ public class heroControl : MonoBehaviour
         isGamepad = pi.currentControlScheme.Equals("Controller") ? true : false;
     }
 
-    IEnumerator DelayAction(float delayTime)
-    {
-        //Wait for the specified delay time before continuing.
-        yield return new WaitForSeconds(delayTime);
-    
-        //Do the action after the delay time has finished.
-    }
+
     public void OnDamage ()
     {
         healthBar.setSize(.4f);
