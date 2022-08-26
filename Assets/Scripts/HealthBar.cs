@@ -5,8 +5,7 @@ using UnityEngine;
 public class HealthBar : MonoBehaviour
 {
     void Start(){
-        RectTransform bar = transform.Find("Bar").GetComponent<RectTransform>();
-        bar.sizeDelta = new Vector2(bar.sizeDelta.x, bar.sizeDelta.y * 0.5f);
+        GetComponent<RectTransform>().localScale = new Vector3(.4f, 1, 1);
     }
 
     void Update(){
