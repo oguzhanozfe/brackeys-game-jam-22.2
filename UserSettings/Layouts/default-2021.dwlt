@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 3069
+  controlID: 38
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 3070
+  controlID: 39
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 3071
+  controlID: 40
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -427,10 +427,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 845e0000
-      m_LastClickedID: 24196
-      m_ExpandedIDs: aaf6ffff14fbffff685d00006e5d0000785d0000905d0000aa5d0000f65d00003a5e0000425e00004a5e00007e5e0000845e00008a5e0000
+      scrollPos: {x: 0, y: 64}
+      m_SelectedIDs: 545e0000
+      m_LastClickedID: 24148
+      m_ExpandedIDs: 1ee8ffff14fbffff685d00006e5d0000785d0000905d0000f65d0000425e00004a5e00007e5e0000845e00008a5e0000105f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -679,9 +679,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 23.436253, y: 4.435894, z: 34.010155}
+    m_Target: {x: 28.247154, y: -8.42057, z: 58.238068}
     speed: 2
-    m_Value: {x: 23.436253, y: 4.435894, z: 34.010155}
+    m_Value: {x: 28.247154, y: -8.42057, z: 58.238068}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -728,13 +728,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.18883584, y: -0.07240177, z: 0.013973691, w: -0.97925144}
+    m_Target: {x: -0.23770683, y: 0.004084916, z: -0.00096234714, w: -0.9713562}
     speed: 2
-    m_Value: {x: -0.18883586, y: -0.07240178, z: 0.013973691, w: -0.97925144}
+    m_Value: {x: -0.23770146, y: 0.0026278049, z: -0.0006057692, w: -0.9713345}
   m_Size:
-    m_Target: 44.508266
+    m_Target: 57.94813
     speed: 2
-    m_Value: 42.591644
+    m_Value: 57.94813
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -881,36 +881,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Materials
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\unreal\projects\brackeys-game-jam-22.2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c8600000
-    m_LastClickedID: 24776
-    m_ExpandedIDs: 00000000ba600000
+    m_SelectedIDs: 38610000
+    m_LastClickedID: 24888
+    m_ExpandedIDs: 000000002a6100003a610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Materials
+      m_OriginalName: Materials
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 24930
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -924,7 +924,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ba600000
+    m_ExpandedIDs: 000000002a610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -951,8 +951,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000d85e0000000000004e5f00005ec20000def80000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000d85e0000000000004e5f00005ec20000def800009a610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
