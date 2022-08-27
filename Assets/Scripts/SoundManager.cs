@@ -17,8 +17,8 @@ public class SoundManager : MonoBehaviour
         {
             Load();
         }
-
     }
+    
 
     public void SetVolume()
     {
@@ -35,4 +35,6 @@ public class SoundManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("volume", slider.value);
     }
+
+    
 }
