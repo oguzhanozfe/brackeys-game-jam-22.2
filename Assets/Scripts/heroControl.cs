@@ -29,11 +29,15 @@ public class heroControl : MonoBehaviour
 
     public GameObject heartt;
     public GameObject hand;
+<<<<<<< Updated upstream
 
     public bool canShoot;
     public float lastShot;
     public float cooldown;
     public float damage;
+=======
+    
+>>>>>>> Stashed changes
 
     private void Awake()
     {
@@ -116,11 +120,19 @@ public class heroControl : MonoBehaviour
         if (playerControls.Controls.Fire.triggered && canShoot)
         {
             GameObject heart = Instantiate(heartt, hand.transform.position, transform.rotation);
+<<<<<<< Updated upstream
 
             heart.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
             heart.tag = "Heart";
 
             BoxCollider sc = heart.AddComponent(typeof(BoxCollider)) as BoxCollider;
+=======
+            heart.AddComponent<Rigidbody>();
+            heart.GetComponent<Rigidbody>().useGravity = false;
+            heart.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+            heart.tag = "Heart";
+            SphereCollider sc = heart.AddComponent(typeof(SphereCollider)) as SphereCollider;
+>>>>>>> Stashed changes
             Destroy(heart, 2);
             lastShot = Time.time;
         }
