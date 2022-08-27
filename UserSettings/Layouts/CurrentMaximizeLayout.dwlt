@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 2809
+  controlID: 20705
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 2779
+  controlID: 20706
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 2780
+  controlID: 20707
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: aaf6ffff14fbffff685d00006e5d0000785d0000905d0000aa5d0000f65d00003a5e0000425e00004a5e00007e5e0000845e00008a5e0000
+      m_ExpandedIDs: 62a4ffff44aeffff46aeffff48aeffff64b2ffffd0dcffff64e2ffffa0eeffff0cf8ffff38f9ffff88660000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -503,9 +503,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 23.436253, y: 4.435894, z: 34.010155}
+    m_Target: {x: 962.1286, y: 645.3986, z: -4.1367135}
     speed: 2
-    m_Value: {x: 23.436253, y: 4.435894, z: 34.010155}
+    m_Value: {x: 962.1286, y: 645.3986, z: -4.1367135}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -552,13 +552,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.18883584, y: -0.07240177, z: 0.013973691, w: -0.97925144}
+    m_Target: {x: -0.10832364, y: -0.02890225, z: -0.0032760042, w: 0.993553}
     speed: 2
-    m_Value: {x: -0.18883306, y: -0.0724007, z: 0.013973484, w: -0.97923696}
+    m_Value: {x: -0.10833839, y: -0.028906187, z: -0.0032764506, w: 0.99368834}
   m_Size:
-    m_Target: 29.949806
+    m_Target: 257.57883
     speed: 2
-    m_Value: 29.949806
+    m_Value: 257.57883
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -683,8 +683,8 @@ MonoBehaviour:
     y: 0
     width: 246
     height: 831
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -709,8 +709,8 @@ MonoBehaviour:
     y: 831
     width: 2189
     height: 476
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -758,22 +758,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\unreal\projects\brackeys-game-jam-22.2
+  m_LastProjectPath: D:\Unity games\Brackeys game jam\brackeys-game-jam-22.2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c8600000
-    m_LastClickedID: 24776
-    m_ExpandedIDs: 00000000ba600000
+    m_SelectedIDs: 9a5f0000
+    m_LastClickedID: 24474
+    m_ExpandedIDs: 000000005a5f0000985f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -801,7 +801,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ba600000
+    m_ExpandedIDs: 000000005a5f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -826,10 +826,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 845e0000
-    m_LastClickedInstanceID: 24196
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000d85e0000000000004e5f00005ec20000def80000
+    m_SelectedInstanceIDs: c6d0ffff
+    m_LastClickedInstanceID: -12090
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000d85e0000000000004e5f00005ec20000def800009a610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -947,7 +947,7 @@ MonoBehaviour:
     m_CachedPref: -657
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 24196
+  m_LastInspectedObjectInstanceID: -12090
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
